@@ -2,26 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+  background-color: #4b4c5079;
+  border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::-webkit-scrollbar-thumb{
+  background-color: #4B4C50;
+  border-radius: 4px;
+}
+
+@layer components {
+  .body {
+    @apply bg-gray-300 overflow-x-hidden max-w-full
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .nav-buttons {
+    @apply bg-none border-none text-base text-gray-600 hover:text-white transition-colors md:hover:scale-x-110 ease-in-out duration-150; 
+  }
+
+  .search-input {
+    @apply w-full outline-none p-2 pl-10 text-sm text-gray-600 border border-gray-300 rounded-lg bg-gray-300 focus:ring-gray-700  focus:bg-gray-400 placeholder-gray-600 focus:border-gray-700
+  }
+
+  .search {
+    @apply cursor-pointer transition-all;
+  }
+
+  .italic-tag {
+    @apply text-sm italic text-gray-500 font-thin
+  }
+
+  .descriptions {
+    @apply text-base text-gray-500
+  }
+
+  .default-title {
+    @apply text-p-1 mt-3 z-30 w-fit margin-left
+  }
+
+  .highlight-shadow {
+    @apply bg-black/50 absolute h-full w-full z-[15]
+  }
+
+  .highlight-img {
+    @apply w-full absolute h-full bottom-0 top-0 bg-black
+  }
+
+  .highlight-title {
+    @apply font-bold text-[1.75rem] md:text-[3rem] text-white 
+  }
+
+  .text-p-1 {
+    @apply text-xl text-slate-100
+  }
+
+  .margin-left {
+    @apply ml-4 md:ml-16 
+  }
+
+  .icon-button {
+    @apply px-6 py-2 transition duration-150 ease-in flex gap-3 rounded border-none whitespace-nowrap w-full
+  }
+
+  .actor-card {
+    @apply rounded-lg bg-gray-300 text-gray-600 border-2 border-gray-700 w-[136px]
+  }
+
+  .bg-img {
+    @apply h-full z-0 section-background absolute right-0 w-screen left-0 
+  }
+
+  .sections {
+    @apply flex flex-col gap-7 relative z-20 w-full 
+  }
+
+  .section-poster {
+    @apply flex gap-5 overflow-x-auto snap-x overflow-y-hidden pl-6 max-w-[90vw] z-20 scroll-smooth md:ml-16
+  }
+
+  .poster-card {
+    @apply flex flex-col items-center gap-[.9rem] text-base text-white hover:scale-105 ease-in-out duration-150 cursor-pointer scroll-ms-3 snap-start mb-3 mt-3 z-40 hover:drop-shadow-lg
+  }
+
+  .poster-image {
+    @apply min-w-[223px] h-[293px] rounded-lg
+  }
+
+  .section-background {
+    @apply top-0 z-0 left-[-64px] 
+  }
+
+  .scroll-button {
+    @apply h-11 w-11 rounded-full bg-white/30 flex justify-center items-center z-50 hover:bg-white/70 ease-in-out duration-150
+  }
 }
