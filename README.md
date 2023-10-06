@@ -1,6 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Pré-requisitos
 
 Primeiro, inicie o servidor de desenvolvimento:
 
@@ -14,10 +13,6 @@ pnpm dev
 
 Abra [http://localhost:3000](http://localhost:3000) com seu navegador para visualizar o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Estrutura do projeto
 
 - `app/page.tsx`:  Este diretório contém a lógica central da aplicação, incluindo rotas e gerenciamento de estados com o App Router.
@@ -27,7 +22,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - `src/services/api.ts`: Este arquivo contém a configuração da API que é usada no projeto. Certifique-se de configurar sua API_KEY aqui para acessar os recursos da TMDB.
 - `src/services/utils.ts`: Contém funções úteis que podem ser usadas para manipular os dados recebidos da API no lado do servidor do Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Utilização da API
 
