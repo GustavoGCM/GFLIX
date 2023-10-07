@@ -33,6 +33,11 @@ const Header = ({genres}: HeaderProps) => {
               }
             },
           },
+          navbar: {
+            root: {
+              base: 'px-2 py-2.5 sm:px-4'
+            }
+          }
         },
       }}
     >
